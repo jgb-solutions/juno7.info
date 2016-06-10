@@ -18,7 +18,7 @@
 					     		<img src="<?php echo get_stylesheet_directory_uri () ?>/images/logo.png" alt="Home" class="" width="165" />
 					   	</a>
 					</h1>
-					<div  id="block-locale-language" role="complementary" class="block block--locale block--locale-language w80 right">
+					<!-- <div  id="block-locale-language" role="complementary" class="block block--locale block--locale-language w80 right">
 						<ul id="language_switcher" class="right language-switcher-locale-url">
 							<li class="fr first"><a href="<?php echo home_url(); ?>/fr" class="language-link" xml:lang="fr">Français</a></li>
 							<li class="en active"><a href="en" class="language-link active" xml:lang="en">English</a></li>
@@ -27,7 +27,10 @@
 						<div id="language_switcher_btn" class="">
 							EN
 						</div>
-					</div>
+					</div> -->
+
+					<br />
+					<br />
 
 					<?php get_template_part('breakingnews' ); ?>
 

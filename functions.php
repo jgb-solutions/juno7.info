@@ -42,6 +42,10 @@ function juno7info_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size( 'juno-small', 130, 87, true );
+	add_image_size( 'juno-show', 457, 304, true );
+	add_image_size( 'juno-tiny', 50, 50, true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'juno7info' ),

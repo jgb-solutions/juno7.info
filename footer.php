@@ -23,11 +23,6 @@
 		</div>
 		</div>    <div id="footer_about" class="line bglightgrey">
 			<div class="container">
-			 	<style>
-					.footer_about_illustr {
-					 background: transparent url("<?php echo get_stylesheet_directory_uri () ?>/images/logo-footer.png") left center no-repeat !important;
-					}
-				</style>
 				<div  about="/en/block/afp-footer-about" typeof="" class="entity entity-bean bean-afp-rich-block">
 				   <div class="w33 left footer_about_illustr hidem">&nbsp;</div>
 				<div class="w33 left mb2 pr2 pa0m txtbrown txt14 pa2m ">

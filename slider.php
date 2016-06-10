@@ -1,3 +1,15 @@
+<!-- <?php
+
+$query = new WP_Query( array( 'tag' => 'breaking-news' ) );
+
+if ($query->have_posts()) :
+	while ($query->have_posts()) :
+		$query->the_post();?>
+	<h3>Hello world man!</h3>
+<?php endwhile;
+endif;
+?> -->
+
 <div class="panel-pane pane-block pane-bean-afp-production-stories">
 	<div  about="/en/block/afp-production-stories" typeof="" class="entity entity-bean bean-afp-production line relative mb2 mt2">
 		<h2 class="hideXL htitle txt30 txt25m txtcenterm mb2">Top stories</h2>
