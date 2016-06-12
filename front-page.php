@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part('slider'); ?>
+<?php get_template_part('slider-top'); ?>
 
 <!-- principal column -->
 <?php get_template_part('content'); ?>

@@ -1,6 +1,10 @@
 <?php
+$args = [
+	'tag' => 'breaking-news',
+	'posts_per_page' => 5
+];
 
-$query = new WP_Query( array( 'tag' => 'breaking-news' ) );
+$query = new WP_Query( $args );
 
 if ($query->have_posts()) : ?>
 

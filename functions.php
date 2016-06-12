@@ -148,3 +148,10 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// wp_enqueue_script( 'SiteJS');
+
+// wp_localize_script( 'SiteJS', 'junoJS', [
+// 	'template_url' => get_template_directory_uri()
+// ]);
+
