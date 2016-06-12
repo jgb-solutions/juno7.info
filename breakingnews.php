@@ -18,9 +18,11 @@ if ($query->have_posts()) : ?>
 
 	<li>
 		<strong class="title">
-			<a href="<?php echo home_url('/tag/breaking-news' ); ?>">Breaking News</a>
+			<a href="<?php echo home_url('/tag/breaking-news' ); ?>">
+				Breaking News
+				<span class="date"> - <?php the_time('d/m/Y \- g:i'); ?></span>
+			</a>
 		</strong>
-		<span class="date"> - <?php the_time('d/m/Y \- g:i'); ?></span>
 		<p id="afp_news_7|doc-bm1nv-copy" class="afp_news_visibility afp_news_visibility_show" >
 			<a href="<?php the_permalink(); ?>"><?php the_title( ); ?></a>
 		</p>

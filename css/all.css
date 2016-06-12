@@ -7588,4 +7588,11 @@ object {
 	display: block;
 }
 
+.bg-blue {
+	background-color: #2445D9;
+}
+
+.bg-blue a {
+	color: white;
+}
 /*# sourceMappingURL=all.css.map */
