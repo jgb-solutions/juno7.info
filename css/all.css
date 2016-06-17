@@ -7604,4 +7604,12 @@ object {
 	border-top: 1em solid #2445D9;
 	border-bottom: 1em solid #2445D9;
 }
+
+.bg-gradient {
+	background: #1c21a8;
+	background: -moz-linear-gradient(left, #1c21a8 0%, #2445d9 50%, #1c21a8 100%);
+	background: -webkit-linear-gradient(left, #1c21a8 0%,#2445d9 50%,#1c21a8 100%);
+	background: linear-gradient(to right, #1c21a8 0%,#2445d9 50%,#1c21a8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c21a8', endColorstr='#1c21a8',GradientType=1 );
+}
 /*# sourceMappingURL=all.css.map */

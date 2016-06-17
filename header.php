@@ -10,7 +10,7 @@
 </head>
 <body <?php body_class(); ?>>
 	 <header>
-		<div id="header" class="line bg-blue bgwhitem ">
+		<div id="header" class="line bg-blue bgwhitem bg-gradient">
 			<div class="container    ">
 				<div class="line">
 					<h1 id="logo" class="  left txtleft  ">
