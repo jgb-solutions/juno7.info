@@ -1,7 +1,6 @@
 <?php
 $args = [
-	'tag' => 'top-actualites',
-	'posts_per_page' => 10
+	'posts_per_page' => 5
 ];
 
 $query = new WP_Query( $args );

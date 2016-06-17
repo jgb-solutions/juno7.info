@@ -4,26 +4,7 @@
 	<footer id="footer" role="banner">
 		<div class="line bgwhite paddingTB sponsors">
 		   	<div class="container">
-
-					<h3 class="text-center">
-			   			Sponnsors
-			   		</h3>
-
-			   		<?php
-
-						if ( ! is_active_sidebar( 'sidebar-7' ) ) { ?>
-
-					   		<div class="w20 left">
-					   			<h4>hello</h4>
-					   		</div>
-					   		<div class="w20 left">world</div>
-					   		<div class="w20 left">what's up?</div>
-					   		<div class="w20 left">Fourth up?</div>
-					   		<div class="w20 left">Fifth up?</div>
-
-						<?php } ?>
-
-						<?php dynamic_sidebar( 'sidebar-7' ); ?>
+				<?php include('hslider.php'); ?>
 			</div>
 		</div>
 

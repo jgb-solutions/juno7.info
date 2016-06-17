@@ -10,6 +10,7 @@ elixir(function(mix) {
 		'2.css',
 		'3.css',
 		'4.css',
+		'hslider.css',
 		'main.css',
       	])
 
@@ -22,6 +23,9 @@ elixir(function(mix) {
         		// '3.js',
         		// '4.js',
         		'6.js',
+               'imagesloaded.pkgd.js',
+               'hslider.js',
+               'app.js',
         		// '7.js',
           ])
 
