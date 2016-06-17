@@ -121,13 +121,64 @@ function juno7info_widgets_init() {
 		'before_title'  => '<h4 class="htitle txtcenterm txt30 txt20m txtblack mb1">',
 		'after_title'   => '</h4>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Footer 1', 'juno7info' ),
+		'id'            => 'sidebar-3',
+		'description'   => esc_html__( 'Add widgets here.', 'juno7info' ),
+		'before_widget' => '<div id="%1$s">',
+		'after_widget'  => '</div><br>',
+		'before_title'  => '<h6 class="txt14 txtgrey txtbold mb2 txtcenterm">',
+		'after_title'   => '</h6>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Footer 2', 'juno7info' ),
+		'id'            => 'sidebar-4',
+		'description'   => esc_html__( 'Add widgets here.', 'juno7info' ),
+		'before_widget' => '<div id="%1$s">',
+		'after_widget'  => '</div><br>',
+		'before_title'  => '<h6 class="txt14 txtgrey txtbold mb2 txtcenterm bgwhitem pa2m">',
+		'after_title'   => '</h6>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Footer 3', 'juno7info' ),
+		'id'            => 'sidebar-5',
+		'description'   => esc_html__( 'Add widgets here.', 'juno7info' ),
+		'before_widget' => '<div id="%1$s">',
+		'after_widget'  => '</div><br>',
+		'before_title'  => '<h6 class="txt14 txtgrey txtbold mb2 txtcenterm">',
+		'after_title'   => '</h6>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Under Featured Home', 'juno7info' ),
+		'id'            => 'sidebar-6',
+		'description'   => esc_html__( 'Add widgets here.', 'juno7info' ),
+		'before_widget' => '<div id="%1$s">',
+		'after_widget'  => '</div><br>',
+		'before_title'  => '<h6 class="txt14 txtgrey txtbold mb2 txtcenterm">',
+		'after_title'   => '</h6>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Sponsors', 'juno7info' ),
+		'id'            => 'sidebar-7',
+		'description'   => esc_html__( 'Add Sponsors here.', 'juno7info' ),
+		'before_widget' => '<div id="%1$s" class="w20 left">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	) );
+
 }
 add_action( 'widgets_init', 'juno7info_widgets_init' );
 
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+// require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -149,9 +200,29 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-// wp_enqueue_script( 'SiteJS');
+    /**
+	 * Enqueue scripts
+	 *
+	 * @param string $handle Script name
+	 * @param string $src Script url
+	 * @param array $deps (optional) Array of script names on which this script depends
+	 * @param string|bool $ver (optional) Script version (used for cache busting), set to null to disable
+	 * @param bool $in_footer (optional) Whether to enqueue the script before </head> or before </body>
+	 */
+	function theme_name_scripts()
+	{
+		wp_enqueue_script(
+			'junoJS',
+			get_stylesheet_directory_uri ()  . '/js/all.js',
+			null,
+			true,
+			true
+		);
 
-// wp_localize_script( 'SiteJS', 'junoJS', [
-// 	'template_url' => get_template_directory_uri()
-// ]);
+		wp_localize_script( 'junoJS', 'junoJS', [
+			'template_url' => get_template_directory_uri()
+		]);
 
+	}
+
+	add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );

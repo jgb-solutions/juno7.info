@@ -10,9 +10,9 @@
 </head>
 <body <?php body_class(); ?>>
 	 <header>
-		<div id="header" class="line bglightgrey bgwhitem ">
+		<div id="header" class="line bg-blue bgwhitem ">
 			<div class="container    ">
-				<div class="line bg-blue">
+				<div class="line">
 					<h1 id="logo" class="  left txtleft  ">
 					          <a href="<?php echo home_url('/' ); ?>" title="Accueil">
 					     		<img src="<?php echo get_stylesheet_directory_uri () ?>/images/logo.png" alt="Home" class="" width="165" />

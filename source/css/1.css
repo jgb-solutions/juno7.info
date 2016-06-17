@@ -1137,10 +1137,6 @@ span {
     background-color: #ff402c;
 }
 
-.bgblack {
-    background-color: #000;
-}
-
 .bgwhite {
     background-color: #fff;
 }
@@ -4355,13 +4351,6 @@ textarea.form_input {
 
 .content_more.active .content_more_text {
     display: block;
-}
-
-#footer {}
-
-#footer_affiliates {
-    color: white;
-    background: #EDEDEE url(../img/bg-footer-affiliates.png) no-repeat scroll center top;
 }
 
 #footer_affiliates h5 {

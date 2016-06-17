@@ -190,3 +190,23 @@ object {
 .bg-blue a {
 	color: white;
 }
+
+.bg-black {
+	background-color: #000;
+    color: white;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.paddingTB {
+	min-height: 50px;
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+}
+
+.sponsors {
+	border-top: 1em solid #2445D9;
+	border-bottom: 1em solid #2445D9;
+}
