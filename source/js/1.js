@@ -1122,7 +1122,7 @@
 					adaptiveHeight:true,
 					speed:1000,
 					pager:false,
-					auto:false,
+					auto:true,
 					loop:true,
 					rtl:is_rtl,
 					onSliderLoad: function (el) {

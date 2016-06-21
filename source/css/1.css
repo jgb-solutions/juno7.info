@@ -2183,7 +2183,7 @@ map {
 #header_search {}
 
 #search-block-form {
-    float: right;
+    // float: right;
     background: #fff;
     height: 35px;
     width: 320px;
@@ -4786,9 +4786,9 @@ textarea.form_input {
     .w100m {
         width: 100% !important;
     }
-    .hidem {
-        display: none;
-    }
+    // .hidem {
+    //     display: none;
+    // }
     .txtleftm {
         text-align: left;
     }

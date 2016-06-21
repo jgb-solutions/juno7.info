@@ -8,7 +8,7 @@
 	<!-- CONTENT column -->
 <div class="w66 right pl2 pa0m">
 
-	<h2 class="htitle txt30  txt25m txtcenterm text-center">Tous les articles</h2>
+	<h2 class="htitle txt30  txt25m txtcenterm text-center">Catégorie: <?= single_cat_title(); ?></h2>
 
 	<?php
 
@@ -42,7 +42,7 @@
 						</a>
 					</h3>
 
-					<article><?php the_content('Voir l\'article.', true); ?></article>
+					<article><?php the_content('Voir le sponsor.', true); ?></article>
 				</li>
 
 			<?php endwhile; ?>

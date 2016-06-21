@@ -1,48 +1,103 @@
-<?php
-/**
- * The template for displaying search results pages.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package juno7info
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<?php get_template_part('slider-top'); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<!-- Content -->
+<div class="w75 left mt2 pr2 pa0m">
 
-		<?php
-		if ( have_posts() ) : ?>
+	<!-- CONTENT column -->
+<div class="w66 right pl2 pa0m">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'juno7info' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+	<?php
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+	if (have_posts()) :?>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+	<h2 class="htitle txt30  txt25m txtcenterm text-center">
+		Résulats pour: "<?= $_GET['s']; ?>""
+	</h2>
 
-			endwhile;
+	<br />
+	<br />
 
-			the_posts_navigation();
+	<div class="linemam w100 ">
+		<ul>
 
-		else :
+			<?php while (have_posts()) : the_post();?>
 
-			get_template_part( 'template-parts/content', 'none' );
+			<li class="article w100 left clear mb1">
+				<a href="<?= get_permalink(); ?>">
 
-		endif; ?>
+	 				<?php
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	             		$attr = [
+							'class'	=> "left mr1 shadow",
+							'alt'	=> get_the_title(),
+							'title'	=> get_the_title(),
+						];
 
-<?php
-get_sidebar();
-get_footer();
+		              		the_post_thumbnail('thumbnail', $attr); ?>
+
+					</a>
+					<h3 class="htitle txt20  txt25m txtcenterm ">
+						<a href="<?= get_permalink(); ?>">
+							<em><?= get_the_title() ?></em>
+						</a>
+					</h3>
+
+					<article><?php the_content('Voir l\'article.', true); ?></article>
+				</li>
+
+			<?php endwhile; ?>
+
+			</ul>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div class="navigation text-center mb2">
+				<?php
+
+				$args = [
+					'prev_text'          => __('« Avant'),
+					'next_text'          => __('Après »')
+				];
+
+				echo paginate_links( $args );?>
+
+			</div>
+
+		</div>
+
+		<?php else: ?>
+
+			<h2 class="htitle txt30  txt25m txtcenterm text-center">
+				Pas de résultats pour: "<?= $_GET['s']; ?>""
+			</h2>
+
+			<br />
+			<br />
+
+			<article>
+				<p>
+					Nous sommes désolés. Mais nous n'avons pas pu trouver ce que vous recherchiez.<br/>
+					Essayez de chercher autre chose dans la forme ci-dessous ou retournez sur
+					 <a href="<?= home_url('/'); ?>">la page d'accueil</a>.
+				</p>
+				<p class="text-center">
+					<?php get_search_form(); ?>
+				</p>
+			</article>
+
+		<?php endif; ?>
+
+
+	</div>
+
+	<!-- Left Column -->
+	<?php get_sidebar('left'); ?>
+
+</div>
+<!-- /Content -->
+
+<!-- RIGHT column -->
+<?php get_sidebar('right'); ?>
+
+<?php get_footer(); ?>

@@ -1,48 +1,38 @@
+<?php
+
+$args = [
+	'post_type' => 'sponsors',
+	'posts_per_page' => 10
+];
+
+$query = new WP_Query( $args );
+
+if ($query->have_posts()) :?>
+
 <div class="hsldr-container">
 
+	<?php while ($query->have_posts()) : $query->the_post(); ?>
+
 	<figure>
-		<img src="https://unsplash.it/300/300?image=1054" />
-		<figcaption>Sérgio Rola</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1053" />
-		<figcaption>Anna Popović</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1052" />
-		<figcaption>Annie Spratt</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1051" />
-		<figcaption>Ales Krivec</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1050" />
-		<figcaption>Joseph Barrientos</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1049" />
-		<figcaption>Rosan Harmens</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1048" />
-		<figcaption>Anthony DELANOIX</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1047" />
-		<figcaption>sergee bee</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1046" />
-		<figcaption>Wilson Lau</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1045" />
-		<figcaption>Winter lamps</figcaption>
-	</figure>
-	<figure>
-		<img src="https://unsplash.it/300/300?image=1044" />
-		<figcaption>Aleksandra Boguslawska</figcaption>
+		<a href="<?= get_permalink(); ?>">
+				<?php
+
+		    		$attr = [
+					'class'	=> "left mr1",
+					'alt'	=> get_the_title(),
+					'title'	=> get_the_title(),
+				];
+
+		     	the_post_thumbnail('thumbnail', $attr); ?>
+
+			<figcaption><?= get_the_title() ?></figcaption>
+		</a>
 	</figure>
 
+	<?php endwhile; ?>
+
+	<?php wp_reset_postdata(); ?>
+
 </div>
+
+<?php endif; ?>

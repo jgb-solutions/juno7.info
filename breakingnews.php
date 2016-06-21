@@ -18,7 +18,7 @@ if ($query->have_posts()) : ?>
 
 	<li>
 		<strong class="title">
-			<a href="<?php echo home_url('/tag/breaking-news' ); ?>">
+			<a href="<?php echo home_url('/t/breaking-news' ); ?>">
 				Breaking News
 				<span class="date"> - <?php the_time('d/m/Y \- g:i'); ?></span>
 			</a>

@@ -1,35 +1,39 @@
-<?php
-/**
- * The template for displaying all single posts.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package juno7info
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<?php get_template_part('slider-top'); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<!-- Content -->
+<div class="w75 left mt2 pr2 pa0m">
 
-		<?php
-		while ( have_posts() ) : the_post();
+		<!-- CONTENT column -->
+	<div class="w66 right pl2 pa0m">
 
-			get_template_part( 'template-parts/content', get_post_format() );
+		<h2 class="htitle txt30  txt25m txtcenterm text-center"><?= get_the_title(); ?></h2>
+		<p class="post-meta text-center">
+			<em>
+				Posté le <?php the_time('d/m/Y \à g:i A'); ?>
+				par <a href="<?= home_url('/' ); ?>">la rédaction</a>.
+			</em>
+		</p>
 
-			the_post_navigation();
+		<br />
+		<br />
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		<div class="linemam w100 ">
 
-		endwhile; // End of the loop.
-		?>
+			<article><?php the_content(); ?></article>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div>
 
-<?php
-get_sidebar();
-get_footer();
+	</div>
+
+	<!-- Left Column -->
+	<?php get_sidebar('left'); ?>
+
+</div>
+<!-- /Content -->
+
+<!-- RIGHT column -->
+<?php get_sidebar('right'); ?>
+
+<?php get_footer(); ?>

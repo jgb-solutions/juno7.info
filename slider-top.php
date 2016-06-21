@@ -1,6 +1,6 @@
 <?php
 $args = [
-	'posts_per_page' => 5
+	'posts_per_page' => 10
 ];
 
 $query = new WP_Query( $args );
@@ -8,8 +8,8 @@ $query = new WP_Query( $args );
 if ($query->have_posts()) : $i = 0; ?>
 
 <div class="panel-pane pane-block pane-bean-afp-production-stories">
-	<div  about="/en/block/afp-production-stories" typeof="" class="entity entity-bean bean-afp-production line relative mb2 mt2">
-		<h2 class="hideXL htitle txt30 txt25m txtcenterm mb2">Top Actualités</h2>
+	<div class="entity entity-bean bean-afp-production line relative mb2 mt2">
+		<h2 class="hideXL htitle txt30 txt25m txtcenterm mb2">Articles récents</h2>
 		<div id="home_slider_container" class="w100 left bgwhite pa1" >
 			<a  id="home_slider_prev" class="w05 left slider_control slider_control_prev"><span>&lt;</span></a>
 				<div id="home_slider" class="w90 center">

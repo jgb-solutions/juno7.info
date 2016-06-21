@@ -2,11 +2,16 @@
 
 <div class="line">
 	<footer id="footer" role="banner">
+
+		<?php if ( ! is_post_type_archive('sponsors') ): ?>
+
 		<div class="line bgwhite paddingTB sponsors">
 		   	<div class="container">
 				<?php include('hslider.php'); ?>
 			</div>
 		</div>
+
+		<?php endif; ?>
 
 		<div id="footer_about" class="line bglightgrey">
 			<div class="container">
@@ -37,13 +42,12 @@
 
 				<div
 					id="block-menu-menu-footer" role="navigation"
-					class="block block--menu block--menu-menu-footer w15 w100m left mb2 txtbrown txt14 ma0m">
+					class="block block--menu block--menu-menu-footer w30 w100m left mb2 txtbrown txt14 ma0m">
 
 					<?php
 
 						if ( ! is_active_sidebar( 'sidebar-4' ) ) { ?>
 							<h6 class="txt14 txtgrey txtbold mb2 txtcenterm bgwhitem pa2m">Liens Utiles</h6>
-				   			
 				   			<ul>
 								<li class="w33m leftm txtcenterm">
 									<a href="https://www.afp.com/en/sitemap">Site Map</a>
@@ -59,27 +63,6 @@
 						<?php } ?>
 
 						<?php dynamic_sidebar( 'sidebar-4' ); ?>
-				</div>
-
-				<div
-					id="block-menu-menu-blogs" role="navigation"
-					class="block block--menu block--menu-menu-blogs w15 left mb2 pl2 pa0m txtbrown txt14 hidem">
-
-					<?php
-
-					if ( ! is_active_sidebar( 'sidebar-5' ) ) { ?>
-
-						<h6 class="txt14 txtgrey txtbold mb2 txtcenterm">D'autres Liens Utiles</h6>
-
-						<ul>
-							 <li>
-							 	<a href="https://correspondent.afp.com" target="_blank">Correspondent</a>
-							 </li>
-						</ul>
-
-					<?php } ?>
-
-					<?php dynamic_sidebar( 'sidebar-5' ); ?>
 				</div>
 			</div>
 		</div>

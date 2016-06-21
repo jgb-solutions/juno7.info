@@ -1,14 +1,7 @@
-<?php get_header(); ?>
-
-<?php get_template_part('slider-top'); ?>
-
-<!-- Content -->
-<div class="w75 left mt2 pr2 pa0m">
-
-	<!-- CONTENT column -->
+<!-- CONTENT column -->
 <div class="w66 right pl2 pa0m">
 
-	<h2 class="htitle txt30  txt25m txtcenterm text-center"><?= single_cat_title(); ?></h2>
+	<h2 class="htitle txt30  txt25m txtcenterm text-center">Nos Sponsors</h2>
 
 	<?php
 
@@ -45,36 +38,24 @@
 					<article><?php the_content('Voir le sponsor.', true); ?></article>
 				</li>
 
-			<?php endwhile; ?>
+		<?php endwhile; ?>
 
-			</ul>
-			<div>&nbsp;</div>
-			<div>&nbsp;</div>
-			<div class="navigation text-center mb2">
-				<?php
+		</ul>
 
-				$args = [
-					'prev_text'          => __('« Avant'),
-					'next_text'          => __('Après »')
-				];
+		<div class="navigation text-center">
+			<?php
 
-				echo paginate_links( $args );?>
+			$args = [
+				'prev_text'          => __('« Avant'),
+				'prev_text'          => __('« Avant'),
+				'next_text'          => __('Après »')
+			];
 
-			</div>
+			echo paginate_links( $args );?>
 
 		</div>
-
-		<?php endif; ?>
-
 	</div>
 
-	<!-- Left Column -->
-	<?php get_sidebar('left'); ?>
+	<?php endif; ?>
 
 </div>
-<!-- /Content -->
-
-<!-- RIGHT column -->
-<?php get_sidebar('right'); ?>
-
-<?php get_footer(); ?>

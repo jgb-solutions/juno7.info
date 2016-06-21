@@ -11,7 +11,9 @@ if ($query->have_posts()) : $i = 0 ?>
 
 <div class="panel-pane pane-block pane-bean-afp-production-diapo-main">
 	<div class="entity entity-bean bean-afp-production line mb2">
-	    <h2 class="htitle txt30  txt25m txtcenterm ">À la <em>Une</em></h2>
+	    <h2 class="htitle txt30  txt25m txtcenterm ">
+		    	<a href="<?= home_url('/cat/a-la-une'); ?>">À la <em>Une</em></a>
+	    	</h2>
 	    <div class="w100 left clear mt1" id="diaporama">
 			<ul class="w100" >
 
@@ -20,7 +22,7 @@ if ($query->have_posts()) : $i = 0 ?>
 				<li class="w100 diaporama_slide afp_news_visibility afp_news_visibility_show">
 			          <a
 			          	data-index="<?= $i ?>"
-			          	class="afpmodal slideshow"
+			          	class="slideshow"
 			          	href="<?php the_permalink(); ?>">
 			             		<?php
 

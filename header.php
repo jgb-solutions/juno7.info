@@ -34,7 +34,9 @@
 
 					<?php get_template_part('breakingnews' ); ?>
 
-					<?php get_search_form(); ?>
+					<div id="header_search" role="search" class="block block--search block--search-form right relative">
+						<?php get_search_form(); ?>
+					</div>
 
 					<?php get_template_part('menu'); ?>
 				</div>

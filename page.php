@@ -1,38 +1,33 @@
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package juno7info
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<?php get_template_part('slider-top'); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<!-- Content -->
+<div class="w75 left mt2 pr2 pa0m">
 
-			<?php
-			while ( have_posts() ) : the_post();
+		<!-- CONTENT column -->
+	<div class="w66 right pl2 pa0m">
 
-				get_template_part( 'template-parts/content', 'page' );
+		<h2 class="htitle txt30  txt25m txtcenterm text-center"><?= get_the_title(); ?></h2>
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+		<br />
+		<br />
 
-			endwhile; // End of the loop.
-			?>
+		<div class="linemam w100 ">
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			<article><?php the_content(); ?></article>
 
-<?php
-get_sidebar();
-get_footer();
+		</div>
+
+	</div>
+
+	<!-- Left Column -->
+	<?php // get_sidebar('left'); ?>
+
+</div>
+<!-- /Content -->
+
+<!-- RIGHT column -->
+<?php // get_sidebar('right'); ?>
+
+<?php get_footer(); ?>

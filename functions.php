@@ -44,6 +44,7 @@ function juno7info_setup() {
 
 	add_image_size( 'juno-small', 130, 87, true );
 	add_image_size( 'juno-show', 457, 304, true );
+	add_image_size( 'juno-sponsor', 500, 500, true );
 	add_image_size( 'juno-tiny', 50, 50, true );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -102,15 +103,15 @@ add_action( 'after_setup_theme', 'juno7info_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function juno7info_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'juno7info' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'juno7info' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	// register_sidebar( array(
+	// 	'name'          => esc_html__( 'Sidebar', 'juno7info' ),
+	// 	'id'            => 'sidebar-1',
+	// 	'description'   => esc_html__( 'Add widgets here.', 'juno7info' ),
+	// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</section>',
+	// 	'before_title'  => '<h2 class="widget-title txt25">',
+	// 	'after_title'   => '</h2>',
+	// ) );
 
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar Right', 'juno7info' ),
@@ -118,7 +119,7 @@ function juno7info_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'juno7info' ),
 		'before_widget' => '<div id="%1$s" class="panel-pane pane-block widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="htitle txtcenterm txt30 txt20m txtblack mb1">',
+		'before_title'  => '<h4 class="htitle txtcenterm txt25 txt20m txtblack mb1">',
 		'after_title'   => '</h4>',
 	) );
 
@@ -143,16 +144,6 @@ function juno7info_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Footer 3', 'juno7info' ),
-		'id'            => 'sidebar-5',
-		'description'   => esc_html__( 'Add widgets here.', 'juno7info' ),
-		'before_widget' => '<div id="%1$s">',
-		'after_widget'  => '</div><br>',
-		'before_title'  => '<h6 class="txt14 txtgrey txtbold mb2 txtcenterm">',
-		'after_title'   => '</h6>',
-	) );
-
-	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar Under Featured Home', 'juno7info' ),
 		'id'            => 'sidebar-6',
 		'description'   => esc_html__( 'Add widgets here.', 'juno7info' ),
@@ -161,17 +152,6 @@ function juno7info_widgets_init() {
 		'before_title'  => '<h6 class="txt14 txtgrey txtbold mb2 txtcenterm">',
 		'after_title'   => '</h6>',
 	) );
-
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Sponsors', 'juno7info' ),
-		'id'            => 'sidebar-7',
-		'description'   => esc_html__( 'Add Sponsors here.', 'juno7info' ),
-		'before_widget' => '<div id="%1$s" class="w20 left">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>',
-	) );
-
 }
 add_action( 'widgets_init', 'juno7info_widgets_init' );
 
