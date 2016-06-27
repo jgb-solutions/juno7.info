@@ -1,4 +1,4 @@
-<div class="w25 left mt2 mt0m">
+<div class="w25 left mt2 mt0m paddingTB" id="sidebar-right">
 
 	<?php
 

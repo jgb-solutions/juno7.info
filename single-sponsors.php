@@ -8,7 +8,7 @@
 		<!-- CONTENT column -->
 	<div class="w66 right pl2 pa0m">
 
-		<h2 class="htitle txt30  txt25m txtcenterm text-center">
+		<h2 id="hentry" class="htitle txt30  txt25m txtcenterm text-center">
 			<?= get_the_title(); ?>
 			<small><small><small>
 				(<em><a href="<?= home_url('/sponsors'); ?>">Tous nos sponsors</a></em>)
@@ -82,6 +82,8 @@
                               </tbody>
                           </table>
                       </div>
+
+                      <?php include 'shortlink.php'; ?>
 			</article>
 
 		</div>

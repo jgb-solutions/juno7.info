@@ -1,4 +1,4 @@
-<div class="w33 left mb0m">
+<div class="w33 left mb0m" id="sidebar-left">
 
 	<?php
 
@@ -12,7 +12,7 @@
 	if ($query->have_posts()) :?>
 
 	<div class="linemam w100 left clear">
-		<h3  class="htitle txtcenterm txt25 txt22m mb1 pa2m">
+		<h3  class="htitle txt25 txt22m mb1 pa2m">
 			<a href="<?= home_url('/c/editorial'); ?>"><em>Editorial</em></a>
 		</h3>
 
@@ -28,7 +28,7 @@
 				</div>
 
 				<h4 class="txt16 txtblack txtbold mtv">
-					<a href="<?= get_permalink(); ?>" class="content_feed">
+					<a href="<?= get_permalink(); ?>#hentry" class="content_feed">
 						<?= get_the_title(); ?>
 					</a>
 				</h4>
@@ -64,14 +64,14 @@
 	if ($query->have_posts()) :?>
 
 	<div class="linemam w100 left clear mb2">
-		<h3  class="htitle txtcenterm txt25 txt22m mb2">Articles Populaires</h3>
+		<h3  class="htitle txt25 txt22m mb2">Articles Populaires</h3>
 
 		<ul>
 
 			<?php while ($query->have_posts()) : $query->the_post(); ?>
 
 			<li class="article w100 left clear mb1">
-				<a href="<?= get_permalink(); ?>">
+				<a href="<?= get_permalink(); ?>#hentry">
 
 	 				<?php
 
@@ -90,7 +90,7 @@
 				</span>
 				<br />
 				<span>
-					<a href="<?= get_permalink(); ?>"><?= get_the_title() ?></a>
+					<a href="<?= get_permalink(); ?>#hentry"><?= get_the_title() ?></a>
 				</span>
 			</li>
 

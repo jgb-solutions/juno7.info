@@ -12,7 +12,7 @@
 
 	if (have_posts()) :?>
 
-	<h2 class="htitle txt30  txt25m txtcenterm text-center">
+	<h2 id="hentry" class="htitle txt30  txt25m txtcenterm text-center">
 		Résulats pour: "<?= $_GET['s']; ?>""
 	</h2>
 

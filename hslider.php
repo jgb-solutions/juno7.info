@@ -14,7 +14,7 @@ if ($query->have_posts()) :?>
 	<?php while ($query->have_posts()) : $query->the_post(); ?>
 
 	<figure>
-		<a href="<?= get_permalink(); ?>">
+		<a href="<?= get_permalink(); ?>#hentry">
 				<?php
 
 		    		$attr = [

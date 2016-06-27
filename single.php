@@ -5,10 +5,10 @@
 <!-- Content -->
 <div class="w75 left mt2 pr2 pa0m">
 
-		<!-- CONTENT column -->
+	<!-- CONTENT column -->
 	<div class="w66 right pl2 pa0m">
 
-		<h2 class="htitle txt30  txt25m txtcenterm text-center"><?= get_the_title(); ?></h2>
+		<h2 id="hentry" class="htitle txt30  txt25m txtcenterm text-center"><?= get_the_title(); ?></h2>
 		<p class="post-meta text-center">
 			<em>
 				Posté le <?php the_time('d/m/Y \à g:i A'); ?> dans
@@ -30,13 +30,16 @@
 
 			<article>
 				<?php the_content(); ?>
-				
+
 				<br>
 				<br>
 
 				<p>
-					<?php the_tags( 'Mots-clés: ', ', ', '' ); ?>
+					<?php the_tags( 'Mots-clés: <strong>', ', ', '</strong>' ); ?>
 				</p>
+
+				<?php include 'shortlink.php'; ?>
+
 			</article>
 
 		</div>

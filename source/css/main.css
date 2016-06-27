@@ -181,9 +181,20 @@ object {
 	padding-bottom: 1em;
 }
 
+.paddingTM {
+	padding-top: 1em;
+}
+
 .sponsors {
 	// border-top: 1em solid #2445D9;
 	border-bottom: 1em solid #2445D9;
+}
+
+@media screen and (max-width: 768px ) {
+	#sidebar-left,
+	#sidebar-right {
+		border-top: 1em solid #2445D9;
+	}
 }
 
 .bg-gradient {

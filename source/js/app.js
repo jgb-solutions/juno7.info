@@ -5,4 +5,7 @@ jQuery( document ).ready(function()
 	  auto: true,
 	  delay: 1500
 	});
+
+
+	// Auto updating the latest articles.
 });

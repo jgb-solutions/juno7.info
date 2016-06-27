@@ -16,7 +16,7 @@
 			<?php while (have_posts()) : the_post();?>
 
 			<li class="article w100 left clear mb1">
-				<a href="<?= get_permalink(); ?>">
+				<a href="<?= get_permalink(); ?>#hentry">
 
 	 				<?php
 
@@ -30,7 +30,7 @@
 
 					</a>
 					<h3 class="htitle txt20  txt25m txtcenterm ">
-						<a href="<?= get_permalink(); ?>">
+						<a href="<?= get_permalink(); ?>#hentry">
 							<em><?= get_the_title() ?></em>
 						</a>
 					</h3>
@@ -41,19 +41,8 @@
 		<?php endwhile; ?>
 
 		</ul>
-		<div>&nbsp;</div>
-		<div>&nbsp;</div>
-		<div class="navigation text-center mb2">
-			<?php
 
-			$args = [
-				'prev_text'          => __('« Avant'),
-				'next_text'          => __('Après »')
-			];
-
-			echo paginate_links( $args );?>
-
-		</div>
+		<?php include 'pagination.php'; ?>
 
 	</div>
 

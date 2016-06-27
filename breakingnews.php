@@ -24,7 +24,7 @@ if ($query->have_posts()) : ?>
 			</a>
 		</strong>
 		<p id="afp_news_7|doc-bm1nv-copy" class="afp_news_visibility afp_news_visibility_show" >
-			<a href="<?php the_permalink(); ?>"><?php the_title( ); ?></a>
+			<a href="<?php the_permalink(); ?>#hentry"><?php the_title( ); ?></a>
 		</p>
 	</li>
 

@@ -21,7 +21,7 @@ if ($query->have_posts()) : $i = 0; ?>
 							<div class="date">
 								<strong><?php the_time('d/m/Y \- g:i'); ?></strong>
 							</div>
-							<a href="<?php the_permalink(); ?>" class="picture">
+							<a href="<?php the_permalink(); ?>#hentry" class="picture">
 
 								<?php
 
@@ -35,9 +35,9 @@ if ($query->have_posts()) : $i = 0; ?>
 				              		?>
 								<br>
 							</a>
-							
+
 							<h3>
-								<a href="<?php the_permalink(); ?>">
+								<a href="<?php the_permalink(); ?>#hentry">
 									<?php the_title(); ?>
 								</a>
 							</h3>

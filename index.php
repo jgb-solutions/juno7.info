@@ -23,7 +23,7 @@
 			<?php while (have_posts()) : the_post();?>
 
 			<li class="article w100 left clear mb1">
-				<a href="<?= get_permalink(); ?>">
+				<a href="<?= get_permalink(); ?>#hentry">
 
 	 				<?php
 
@@ -37,7 +37,7 @@
 
 					</a>
 					<h3 class="htitle txt20  txt25m txtcenterm ">
-						<a href="<?= get_permalink(); ?>">
+						<a href="<?= get_permalink(); ?>#hentry">
 							<em><?= get_the_title() ?></em>
 						</a>
 					</h3>
